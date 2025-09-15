@@ -4,6 +4,7 @@ import "./profil.css";
 export default function Profil() {
   return (
     <div className="profil-container">
+        <h1>helloooo kawannn</h1>
       <h1>Profil Saya</h1>
       <img
         src="https://via.placeholder.com/150"
