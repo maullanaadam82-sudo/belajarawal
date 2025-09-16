@@ -5,7 +5,7 @@ import Dashboard from "./dashboard";
 function App() {
   return (
     <div>
-      <h1>Halo Dunia</h1>
+      <h1>Halo Dunia baik padakuu</h1>
       <Login />
       <p>Ini dari fitur-dashboard</p>
 
