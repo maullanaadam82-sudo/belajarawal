@@ -1,7 +1,7 @@
 import React from "react";
 import Profil from "./profil";
 import Login from "./login";
-
+import Dashboard from "./dashboard";
 function App() {
   return (
     <div>
