@@ -1,28 +1,18 @@
-import React from "react";
-import Profil from "./profil";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Login from "./login";
 import Dashboard from "./dashboard";
-function App() {
-  return (
-    <div>
-<<<<<<< HEAD
-      <h1>Halo Dunia yanng sangat jahat padakuu</h1>
-=======
-      <h1>Halo Dunia baik padakuu</h1>
->>>>>>> fitur-b
-      <Login />
-      <p>Ini dari fitur-dashboard</p>
-
-    </div>
-  );
-}
-
-
+import Profil from "./profil";
 
 export default function App() {
+  const isLoggedIn = !!localStorage.getItem("token");
+
   return (
-    <div>
-      <Profil />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/login" element={isLoggedIn ? <Navigate to="/" /> : <Login />} />
+        <Route path="/" element={isLoggedIn ? <Dashboard /> : <Navigate to="/login" />} />
+        <Route path="/profil" element={isLoggedIn ? <Profil /> : <Navigate to="/login" />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
