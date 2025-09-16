@@ -7,6 +7,8 @@ function App() {
     <div>
       <h1>Halo Dunia</h1>
       <Login />
+      <p>Ini dari fitur-dashboard</p>
+
     </div>
   );
 }
